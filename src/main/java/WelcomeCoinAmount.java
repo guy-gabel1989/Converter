@@ -1,12 +1,19 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class WelcomeCoinAmount {
 
+
     void welcomecoinamount() {
-        // Welcome message
-        System.out.println("Welcome to my converter!");
+
         //while loop to keep user in the program until  the conditions are met
+        String filePath = "Result List";
         while (true) {
 
             // Ask user what they would like to convert
@@ -22,6 +29,10 @@ public class WelcomeCoinAmount {
                     Coin usdCoin = CoinFactory.getCoineType(Coins.USD);
                     double result = usdCoin.calculate(amount);
                     System.out.println(amount + " USD is equal to " + result + " ILS.");
+                    ArrayList<String> results = new ArrayList<>();
+                    results.add("You converted " +  amount + " USD to " + result + " ILS" );
+                    Files.write(Paths.get(filePath), results, StandardOpenOption.APPEND);
+
                     break;
                 } else if (choice == 2) {
                     System.out.println("How much would you like to convert?");
@@ -29,6 +40,10 @@ public class WelcomeCoinAmount {
                     Coin ilsCoin = CoinFactory.getCoineType(Coins.ILS);
                     double result = ilsCoin.calculate(amount);
                     System.out.println(amount + " ILS is equal to " + result + " USD.");
+                    ArrayList<String> results = new ArrayList<>();
+                    results.add("You converted " +  amount + " ILS to " + result + " USD" );
+                    Files.write(Paths.get(filePath), results, StandardOpenOption.APPEND);
+                    //Files.writeString(Paths.get(filePath), "You converted " +  amount + "ILS to " + result + " USD" );
                     break;
                 } else {
                     System.out.println("Invalid choice. Please enter either 1 or 2.");
@@ -39,6 +54,8 @@ public class WelcomeCoinAmount {
                 System.out.println("Let's try again");
 
 
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
 

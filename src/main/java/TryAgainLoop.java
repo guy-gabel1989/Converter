@@ -6,7 +6,10 @@ public class TryAgainLoop {
         do {
 
             WelcomeCoinAmount start = new WelcomeCoinAmount();
+
             start.welcomecoinamount();
+
+
 
             Scanner scanner2 = new Scanner(System.in);
             System.out.println("That's it!");
