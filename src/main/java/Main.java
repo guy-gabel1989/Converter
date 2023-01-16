@@ -1,21 +1,22 @@
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        //First Screen - Welcome message
         WelcomeMessage firstWelcome = new WelcomeMessage();
         firstWelcome.welcomeMessage();
+
+        // the converter method is inside the TryAgainLoop class, see the mechanism inside that class
         TryAgainLoop converterWithLoop = new TryAgainLoop();
         converterWithLoop.tryAgain();
 
-        String filePath = "Result List";
-        String resultsPrint = new String(Files.readAllBytes(Paths.get(filePath)));
-        System.out.println(resultsPrint);
-        
+        //print all the results from the "Result List.txt.txt file"
+        ResultPrint resultPrint = new ResultPrint();
+        resultPrint.resultPrint();
 
+        // Goodbye greeting and exiting
+        SayGoodbye bye = new SayGoodbye();
+        bye.goodbye();
 
     }
 
