@@ -12,7 +12,7 @@ public class CalculateAndSaveResult {
     void calculateAndSaveResult() {
 
         //Set filePath for storing the result at the end of each iteration
-        String filePath = "Result List";
+        String filePath = "Result List.txt";
 
         //while loop to keep user in the program until  the conditions are met
         while (true) {

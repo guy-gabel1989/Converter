@@ -10,7 +10,7 @@ public class Main {
         TryAgainLoop converterWithLoop = new TryAgainLoop();
         converterWithLoop.tryAgain();
 
-        //print all the results from the "Result List.txt file"
+        //print all the results from the "Result List.txt.txt file"
         ResultPrint resultPrint = new ResultPrint();
         resultPrint.resultPrint();
 
