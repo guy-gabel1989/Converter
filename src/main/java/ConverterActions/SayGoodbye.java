@@ -1,5 +1,7 @@
+package ConverterActions;
+
 public class SayGoodbye {
-    void goodbye() {
+    public void goodbye() {
         String goodbye = "See you next time! Goodbye!";
         for (int i = 0; i < goodbye.length(); i++) {
             System.out.print("*");

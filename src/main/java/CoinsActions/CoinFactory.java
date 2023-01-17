@@ -1,3 +1,5 @@
+package CoinsActions;
+
 public class CoinFactory {
     public static Coin getCoineType(Coins coinType) {
         switch (coinType) {

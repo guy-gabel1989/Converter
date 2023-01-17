@@ -1,5 +1,7 @@
-public class ILS extends Coin{
-    private final double value = 0.28;
+package CoinsActions;
+
+public class USD extends Coin{
+    private final double value = 3.52;
     @Override
     double getValue() {
         return value;

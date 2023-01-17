@@ -1,3 +1,8 @@
+import ConverterActions.ResultPrint;
+import ConverterActions.SayGoodbye;
+import ConverterActions.TryAgainLoop;
+import ConverterActions.WelcomeMessage;
+
 import java.io.IOException;
 
 public class Main {
@@ -6,7 +11,7 @@ public class Main {
         WelcomeMessage firstWelcome = new WelcomeMessage();
         firstWelcome.welcomeMessage();
 
-        // the converter method is inside the TryAgainLoop class, see the mechanism inside that class
+        // the converter method is inside the ConverterActions.TryAgainLoop class, see the mechanism inside that class
         TryAgainLoop converterWithLoop = new TryAgainLoop();
         converterWithLoop.tryAgain();
 

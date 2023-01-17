@@ -1,13 +1,17 @@
+package ConverterActions;
+
+import CoinsActions.CalculateAndSaveResult;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TryAgainLoop {
     //wrapping the calculation in a loop to make sure the user stay in the program
-    void tryAgain(){
+    public void tryAgain(){
         //initializing startOver object
         String startOver = null;
         do {
-            //calling the CalculateAndSaveResult class to initiate the coin creation
+            //calling the CoinsActions.CalculateAndSaveResult class to initiate the coin creation
             CalculateAndSaveResult start = new CalculateAndSaveResult();
             start.calculateAndSaveResult();
 
