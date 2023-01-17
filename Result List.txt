@@ -1,0 +1,5 @@
+You converted 500.0 ILS to 140.0 USD
+You converted 10.0 USD to 35.2 ILS
+You converted 5.0 ILS to 1.4000000000000001 USD
+You converted 10.0 USD to 35.2 ILS
+You converted 500.0 ILS to 140.0 USD

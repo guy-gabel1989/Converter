@@ -7,7 +7,10 @@ public class ResultPrint {
 
         //file path for the file the holds all the calculations
         String filePath = "Result List.txt";
-        //prints evrything that's in the Result List.txt file
+        //Thank you message
+        System.out.println("Thank you for using the converter");
+        System.out.println("Here are all the conversions you've made: ");
+        //prints everything that's in the Result List.txt file
         String resultsPrint = new String(Files.readAllBytes(Paths.get(filePath)));
         System.out.println(resultsPrint);
     }
