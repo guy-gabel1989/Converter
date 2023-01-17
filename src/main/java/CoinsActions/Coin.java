@@ -1,3 +1,5 @@
+package CoinsActions;
+
 public abstract class Coin implements ICalcualate{
     abstract double getValue();
 
